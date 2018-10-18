@@ -1,53 +1,73 @@
 <template>
   <div>
-    <nuxt/>
+    <div class="sidebar">
+      <TheStatus class="status" />
+      <TheHeader class="sidemenu" />
+    </div>
+    <div class="pages">
+      <nuxt/>
+    </div>
+    <TheFooter/>
   </div>
 </template>
 
+<script>
+import TheHeader from '~/components/TheHeader.vue'
+import TheFooter from '~/components/TheFooter.vue'
+import TheStatus from '~/components/TheStatus.vue'
+
+export default {
+  components: {
+    TheHeader,
+    TheFooter,
+    TheStatus
+  }
+}
+</script>
 <style>
 html {
+  position: relative;
+  background: black;
+  color: white;
   font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
-  -ms-text-size-adjust: 100%;
-  -webkit-text-size-adjust: 100%;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  box-sizing: border-box;
 }
 
-*, *:before, *:after {
-  box-sizing: border-box;
-  margin: 0;
+.pages {
+  position: absolute;
+  top: 33px;
+  left: 180px;
 }
 
-.button--green {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #3b8070;
-  color: #3b8070;
-  text-decoration: none;
-  padding: 10px 30px;
+.sidemenu {
+  position: absolute;
+  top: 200px;
+  left: 10px;
 }
 
-.button--green:hover {
+.sidemenu::before {
+  background-color: #000;
   color: #fff;
-  background-color: #3b8070;
+  content: "めにゅう";
+  position: relative;
+  left: 45px;
+  top: 12px;
 }
 
-.button--grey {
-  display: inline-block;
-  border-radius: 4px;
-  border: 1px solid #35495e;
-  color: #35495e;
-  text-decoration: none;
-  padding: 10px 30px;
-  margin-left: 15px;
+.status {
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
-.button--grey:hover {
+.status::before {
+  background-color: #000;
   color: #fff;
-  background-color: #35495e;
+  content: "いわてぃ";
+  position: relative;
+  left: 45px;
+  top: 12px;
 }
 </style>
 

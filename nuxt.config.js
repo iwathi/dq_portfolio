@@ -2,6 +2,7 @@ module.exports = {
   /*
   ** Headers of the page
   */
+  mode: 'spa',
   head: {
     title: 'dq_portfolio',
     meta: [
@@ -13,6 +14,9 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  css:[
+  '@/assets/css/dqmenu.css'
+  ],
   /*
   ** Customize the progress bar color
   */
