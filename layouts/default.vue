@@ -1,8 +1,12 @@
 <template>
   <div>
+    <div class="kingImg">
+      <img src="~/assets/img/king.gif" />
+    </div>
     <div class="sidebar">
       <TheStatus class="status" />
       <TheHeader class="sidemenu" />
+    <TheGold class="gold" />
     </div>
     <div class="pages">
       <nuxt/>
@@ -15,11 +19,13 @@
 import TheHeader from '~/components/TheHeader.vue'
 import TheFooter from '~/components/TheFooter.vue'
 import TheStatus from '~/components/TheStatus.vue'
+import TheGold from '~/components/TheGold.vue'
 
 export default {
   components: {
     TheHeader,
     TheFooter,
+    TheGold,
     TheStatus
   }
 }
@@ -34,15 +40,21 @@ html {
   word-spacing: 1px;
 }
 
+.kingImg {
+  position: absolute;
+  top: 15px;
+  left: 300px;
+}
+
 .pages {
   position: absolute;
-  top: 33px;
+  top: 120px;
   left: 180px;
 }
 
 .sidemenu {
   position: absolute;
-  top: 200px;
+  top: 170px;
   left: 10px;
 }
 
@@ -55,6 +67,20 @@ html {
   top: 12px;
 }
 
+.gold {
+  position: absolute;
+  top: 10px;
+  left: 505px;
+}
+
+.gold::before {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  left: 37px;
+  top: 12px;
+}
+
 .status {
   position: absolute;
   top: 10px;
@@ -64,9 +90,9 @@ html {
 .status::before {
   background-color: #000;
   color: #fff;
-  content: "いわてぃ";
+  content: "げすとさん";
   position: relative;
-  left: 45px;
+  left: 37px;
   top: 12px;
 }
 </style>

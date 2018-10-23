@@ -3,10 +3,10 @@
     <div class="status-list">
       <ul>
         <li>{{statusJob}}</li>
-        <li>せいべつ：おとこ</li>
         <li>レベル：{{statusLevel}}</li>
         <li>ＨＰ：{{statusHp}}</li>
         <li>ＭＰ：{{statusMp}}</li>
+        <li>ＥＸ：{{statusEx}}</li>
       </ul>
     </div>
   </section>
@@ -19,10 +19,11 @@ export default {
   },
   data (){
     return {
-      statusJob: 'ぱぱえんじにあ',
-      statusLevel: 29,
-      statusHp: 100,
-      statusMp: 100
+      statusJob: 'らいほうしゃ',
+      statusLevel: 1,
+      statusHp: 10,
+      statusMp: 10,
+      statusEx: 10
     }
   }
 }
@@ -33,7 +34,7 @@ export default {
 .status-list{
   text-align: center;
   width: 130px;
-  height: 140px;
+  height: 120px;
   padding:10px;
   margin-bottom:10px;
   border: 2px solid #fff;
