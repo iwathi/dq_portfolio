@@ -11,7 +11,6 @@
     <div class="pages">
       <nuxt/>
     </div>
-    <TheFooter/>
   </div>
 </template>
 

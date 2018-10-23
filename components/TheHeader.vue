@@ -43,26 +43,26 @@ export default {
           name: 'ぶろぐ',
           link: 'pageBlog'
         },
-        {
-          name: 'しゃしん',
-          link: 'pagePhoto'
-        },
-        {
-          name: 'じゅもん',
-          link: 'pageSpells'
-        },
-        {
-          name: 'にげる',
-          link: 'pageRunAway'
-        },
-        {
-          name: 'はなす',
-          link: 'pageTalk'
-        },
-        {
-          name: 'てすと',
-          link: 'test'
-        },
+//        {
+//          name: 'しゃしん',
+//          link: 'pagePhoto'
+//        },
+//         {
+//           name: 'じゅもん',
+//           link: 'pageSpells'
+//         },
+//         {
+//           name: 'にげる',
+//           link: 'pageRunAway'
+//         },
+//         {
+//           name: 'はなす',
+//           link: 'pageTalk'
+//         },
+//         {
+//           name: 'てすと',
+//           link: 'test'
+//         },
       ]
     }
   },
