@@ -6,7 +6,7 @@
         <li>レベル：{{statusLevel}}</li>
         <li>ＨＰ：{{statusHp}}</li>
         <li>ＭＰ：{{statusMp}}</li>
-        <li>ＥＸ：{{statusEx}}</li>
+        <li>ＥＸ：{{stateEx}}</li>
       </ul>
     </div>
   </section>
@@ -24,6 +24,11 @@ export default {
       statusHp: 10,
       statusMp: 10,
       statusEx: 10
+    }
+  },
+  computed: {
+    stateEx: function(){
+      return this.$store.state.ex
     }
   }
 }

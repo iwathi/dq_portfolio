@@ -17,7 +17,6 @@ export default {
   data: function() {
     return {
       menuChoice: 0,
-      initChoice: 0,
       menuList: [
         {
           name: 'とっぷ',
@@ -66,9 +65,6 @@ export default {
       ]
     }
   },
-  mounted: function() {
-    this.getPageNumber()
-  },
   methods: {
     menuMouseover: function(i){
       //this.menuList[i].name = '▶' + this.menuList[i].name
@@ -76,7 +72,7 @@ export default {
     },
     menuMouseleave: function(i){
       //this.menuList[i].name = this.menuList[i].name.slice(1)
-      this.menuChoice = this.initChoice
+      this.menuChoice = this.pageChoice
     },
     getPageNumber: function(){
       console.log(this.menuList.length)
@@ -87,6 +83,11 @@ export default {
           this.initChoice = i
           break
       }
+    }
+  },
+  computed: {
+    pageChoice: function(){
+      return this.$store.state.page
     }
   }
 }

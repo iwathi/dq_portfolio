@@ -35,7 +35,11 @@
 
 export default {
   components: {
-  }
+  },
+  mounted: function() {
+    this.$store.commit('pageChange', 0)
+
+  },
 }
 </script>
 

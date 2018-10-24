@@ -59,6 +59,10 @@ export default {
       ]
     }
   },
+  mounted: function() {
+    this.$store.commit('pageChange', 4)
+
+  },
   methods: {
     artifactsMouseover: function(i){
       //this.artifactsList[i].name = '▶' + this.skillsList[i].name

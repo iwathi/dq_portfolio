@@ -72,6 +72,10 @@ export default {
       ]
     }
   },
+  mounted: function() {
+    this.$store.commit('pageChange', 3)
+
+  },
   methods: {
     toolsMouseover: function(i){
       //this.toolsList[i].name = '▶' + this.skillsList[i].name

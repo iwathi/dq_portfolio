@@ -1,16 +1,16 @@
 <template>
   <section>
-    <div class="tools-menu">
-      <div class="tools-menu-list">
+    <div class="blogs-menu">
+      <div class="blogs-menu-list">
         <ul>
-          <li v-for="(tool, index) in toolsList" v-on:mouseleave="toolsMouseleave(index)" v-on:mouseover="toolsMouseover(index)" :key="index"><a class="menuCursor" v-if="toolsChoice==index">▶</a>{{tool.name}}</li>
+          <li v-for="(blog, index) in blogsList" v-on:mouseleave="blogsMouseleave(index)" v-on:mouseover="blogsMouseover(index)" :key="index"><a class="menuCursor" v-if="blogsChoice==index">▶</a>{{blog.name}}</li>
         </ul>
       </div>
     </div>
-    <div class="tools-details">
-      <div class="tools-details-list">
+    <div class="blogs-details">
+      <div class="blogs-details-list">
         <ul>
-          <li v-for="detail in toolsList[toolsChoice].details" :key="detail">{{detail}}</li>
+          <li v-for="detail in blogsList[blogsChoice].details" :key="detail">{{detail}}</li>
         </ul>
       </div>
     </div>
@@ -24,25 +24,29 @@ export default {
   },
   data: function() {
     return {
-      toolsContent: 'ぶろぐ ',
-      toolsChoice: 0,
-      toolsList: [
+      blogsContent: 'ぶろぐ ',
+      blogsChoice: 0,
+      blogsList: [
         {
           name: 'iwathiの/var/log',
           details: [
-            ''
+            'ライフハックやIT系'
           ]
         },
       ]
     }
   },
+  mounted: function() {
+    this.$store.commit('pageChange', 5)
+
+  },
   methods: {
-    toolsMouseover: function(i){
-      //this.toolsList[i].name = '▶' + this.skillsList[i].name
-      this.toolsChoice = i
+    blogsMouseover: function(i){
+      //this.blogsList[i].name = '▶' + this.skillsList[i].name
+      this.blogsChoice = i
     },
-    toolsMouseleave: function(i){
-      //this.toolsList[i].name = this.skillsList[i].name.slice(1)
+    blogsMouseleave: function(i){
+      //this.blogsList[i].name = this.skillsList[i].name.slice(1)
     }
   }
 }
@@ -50,7 +54,7 @@ export default {
 
 <style>
 
-.tools-menu {
+.blogs-menu {
   position: absolute;
   top: 0px;
   left: 0px;
@@ -62,7 +66,7 @@ export default {
   border-radius: 10px;
 }
 
-.tools-menu::before {
+.blogs-menu::before {
   background-color: #000;
   color: #fff;
   content: "ぶろぐ";
@@ -71,13 +75,13 @@ export default {
   top: -23px;
 }
 
-.tools-menu-list {
+.blogs-menu-list {
   position: relative;
   top: -23px;
   text-align: center;
 }
 
-.tools-details {
+.blogs-details {
   position: absolute;
   top: 0px;
   left: 170px;
@@ -89,7 +93,7 @@ export default {
   border-radius: 10px;
 }
 
-.tools-details-list {
+.blogs-details-list {
   text-align: right;
 }
 </style>

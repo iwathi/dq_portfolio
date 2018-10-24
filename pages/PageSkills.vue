@@ -46,6 +46,10 @@ export default {
       ]
     }
   },
+  mounted: function() {
+    this.$store.commit('pageChange', 2)
+
+  },
   methods: {
     skillsMouseover: function(i){
       //this.skillsList[i].name = '▶' + this.skillsList[i].name
