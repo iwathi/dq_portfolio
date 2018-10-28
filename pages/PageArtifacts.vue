@@ -3,14 +3,14 @@
     <div class="artifacts-menu">
       <div class="artifacts-menu-list">
         <ul>
-          <li v-for="(artifact, index) in artifactsList" v-on:mouseleave="artifactsMouseleave(index)" v-on:mouseover="artifactsMouseover(index)" :key="index"><a class="menuCursor" v-if="artifactsChoice==index">▶</a>{{artifact.name}}</li>
+          <li v-for="(artifact, index) in artifactsList" v-on:mouseleave="artifactsMouseleave(index)" v-on:mouseover="artifactsMouseover(index)" :key="artifact.name+index"><a class="menuCursor" v-if="artifactsChoice==index">▶</a>{{artifact.name}}</li>
         </ul>
       </div>
     </div>
     <div class="artifacts-details">
       <div class="artifacts-details-list">
         <ul>
-          <li v-for="detail in artifactsList[artifactsChoice].details" :key="detail">{{detail}}</li>
+          <li v-for="detail in artifactsList[artifactsChoice].details" :key="artifactsList[artifactsChoice].name+detail.name"><a :href="detail.link">{{detail.name}}</a></li>
         </ul>
       </div>
     </div>
@@ -30,30 +30,53 @@ export default {
         {
           name: 'IoT',
           details: [
-            'スマートロック',
-            'ダンボーカメラ',
-            ''
+            {
+              name: 'スマートロック',
+              link: '#'
+            },
+            {
+              name: 'ダンボーカメラ',
+              link: 'https://twitter.com/iwathi/status/916465245983408128'
+            }
           ]
         },
         {
           name: 'DIY',
           details: [
-            '本棚',
-            'キッチンテーブル'
+            {
+              name: '本棚',
+              link: '#'
+            },
+            {
+              name: 'キッチンカウンター',
+              link: 'https://twitter.com/iwathi/status/1045605001509318658'
+            },
           ]
         },
         {
           name: '3Dプリント',
           details: [
-            'タブレット壁掛け',
-            '綿棒ケース'
+            {
+              name: 'タブレット壁掛け',
+              link: 'https://www.thingiverse.com/thing:3090632'
+            },
+            {
+              name: '綿棒ケース(menbou)',
+              link: 'https://www.thingiverse.com/thing:3104757'
+            },
           ]
         },
         {
           name: 'Web',
           details: [
-            '転職タグまとめ',
-            'Kodoguru',
+            {
+              name: '転職タグまとめ',
+              link: 'https://www.hiyokonitsuduke.work/'
+            },
+            {
+              name: 'Kodoguru',
+              link: 'https://kodoguru.herokuapp.com/'
+            },
           ]
         },
       ]
@@ -76,6 +99,16 @@ export default {
 </script>
 
 <style>
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
 
 .artifacts-menu {
   position: absolute;

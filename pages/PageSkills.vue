@@ -3,14 +3,14 @@
     <div class="skills-menu">
       <div class="skills-menu-list">
         <ul>
-          <li v-for="(skill, index) in skillsList" v-on:mouseleave="skillsMouseleave(index)" v-on:mouseover="skillsMouseover(index)" :key="index"><a class="menuCursor" v-if="skillsChoice==index">▶</a>{{skill.name}}</li>
+          <li v-for="(skill, index) in skillsList" v-on:mouseleave="skillsMouseleave(index)" v-on:mouseover="skillsMouseover(index)" :key="skill+index"><a class="menuCursor" v-if="skillsChoice==index">▶</a>{{skill.name}}</li>
         </ul>
       </div>
     </div>
     <div class="skills-details">
       <div class="skills-details-list">
         <ul>
-          <li v-for="detail in skillsList[skillsChoice].details" :key="detail">{{detail}}</li>
+          <li v-for="detail in skillsList[skillsChoice].details" :key="skillsList[skillsChoice].name+detail">{{detail}}</li>
         </ul>
       </div>
     </div>

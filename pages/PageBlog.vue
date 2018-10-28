@@ -3,14 +3,14 @@
     <div class="blogs-menu">
       <div class="blogs-menu-list">
         <ul>
-          <li v-for="(blog, index) in blogsList" v-on:mouseleave="blogsMouseleave(index)" v-on:mouseover="blogsMouseover(index)" :key="index"><a class="menuCursor" v-if="blogsChoice==index">▶</a>{{blog.name}}</li>
+          <li v-for="(blog, index) in blogsList" v-on:mouseleave="blogsMouseleave(index)" v-on:mouseover="blogsMouseover(index)" :key="blog.name+index"><a class="menuCursor" v-if="blogsChoice==index">▶</a>{{blog.name}}</li>
         </ul>
       </div>
     </div>
     <div class="blogs-details">
       <div class="blogs-details-list">
         <ul>
-          <li v-for="detail in blogsList[blogsChoice].details" :key="detail">{{detail}}</li>
+          <li v-for="detail in blogsList[blogsChoice].details" :key="blogsList[blogsChoice].name+detail"><a :href="detail.link">{{detail.name}}</a></li>
         </ul>
       </div>
     </div>
@@ -28,9 +28,12 @@ export default {
       blogsChoice: 0,
       blogsList: [
         {
-          name: 'iwathiの/var/log',
+          name: '生活・IT系',
           details: [
-            'ライフハックやIT系'
+            {
+              name: 'iwathiの/var/log',
+              link: 'http://iwathi3.hatenablog.com/'
+            },
           ]
         },
       ]
@@ -54,6 +57,15 @@ export default {
 
 <style>
 
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
 .blogs-menu {
   position: absolute;
   top: 0px;

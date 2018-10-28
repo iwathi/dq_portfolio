@@ -3,14 +3,14 @@
     <div class="tools-menu">
       <div class="tools-menu-list">
         <ul>
-          <li v-for="(tool, index) in toolsList" v-on:mouseleave="toolsMouseleave(index)" v-on:mouseover="toolsMouseover(index)" :key="index"><a class="menuCursor" v-if="toolsChoice==index">▶</a>{{tool.name}}</li>
+          <li v-for="(tool, index) in toolsList" v-on:mouseleave="toolsMouseleave(index)" v-on:mouseover="toolsMouseover(index)" :key="tool.name+index"><a class="menuCursor" v-if="toolsChoice==index">▶</a>{{tool.name}}</li>
         </ul>
       </div>
     </div>
     <div class="tools-details">
       <div class="tools-details-list">
         <ul>
-          <li v-for="detail in toolsList[toolsChoice].details" :key="detail">{{detail}}</li>
+          <li v-for="detail in toolsList[toolsChoice].details" :key="toolsList[toolsChoice].name+detail.name"><a :href="detail.link">{{detail.name}}</a></li>
         </ul>
       </div>
     </div>
@@ -30,43 +30,100 @@ export default {
         {
           name: 'SNS',
           details: [
-            'Twitter',
-            'Facebook',
-            'Slack'
+            {
+              name: 'Twitter',
+              link: 'https://twitter.com/iwathi'
+            },
+            {
+              name: 'Slack',
+              link: '#'
+            },
           ]
         },
         {
           name: 'ガジェット',
           details: [
-            '3Dプリンター',
-            'Arduino',
-            'Oculus Go',
-            'OSMO MOBILE 2',
-            'Kindle',
-            'AirPods',
-            'GX7-mk2',
-            'ScanSnap iX100',
-            'TicWatch E',
-            'Withings WS-50',
-            '0歳児'
-          ]
-        },
-        {
-          name: 'PC',
-          details: [
-            'iMac',
-            'MBA',
-            'Raspberry Pi',
-            'iPhone 8'
+            {
+              name: 'iMac',
+              link: '#'
+            },
+            {
+              name: 'MBA',
+              link: '#'
+            },
+            {
+              name: 'iPhone 8',
+              link: '#'
+            },
+            {
+              name: 'Raspberry Pi',
+              link: '#'
+            },
+            {
+              name: '3Dプリンター',
+              link: '#'
+            },
+            {
+              name: 'Arduino',
+              link: '#'
+            },
+            {
+              name: 'Oculus Go',
+              link: '#'
+            },
+            {
+              name: 'OSMO MOBILE 2',
+              link: '#'
+            },
+            {
+              name: 'Kindle',
+              link: '#'
+            },
+            {
+              name: 'AirPods',
+              link: '#'
+            },
+            {
+              name: 'GX7-mk2',
+              link: '#'
+            },
+            {
+              name: 'ScanSnap iX100',
+              link: '#'
+            },
+            {
+              name: 'TicWatch E',
+              link: '#'
+            },
+            {
+              name: 'Withings WS-50',
+              link: '#'
+            },
+            {
+              name: '0歳児',
+              link: '#'
+            },
           ]
         },
         {
           name: 'そふとうぇあ',
           details: [
-            'Git',
-            'neo vim',
-            'PhotoShop',
-            'Fusion 360'
+            {
+              name: 'Git',
+              link: '#'
+            },
+            {
+              name: 'neo vim',
+              link: '#'
+            },
+            {
+              name: 'PhotoShop',
+              link: '#'
+            },
+            {
+              name: 'Fusion 360',
+              link: '#'
+            },
           ]
         },
       ]
@@ -89,6 +146,16 @@ export default {
 </script>
 
 <style>
+
+a:link {
+  text-decoration: none;
+  color: white;
+}
+
+a:visited {
+  text-decoration: none;
+  color: white;
+}
 
 .tools-menu {
   position: absolute;
@@ -122,7 +189,7 @@ export default {
   top: 0px;
   left: 170px;
   width: 150px;
-  height: 250px;
+  height: 350px;
   padding:10px;
   margin-bottom:10px;
   border: 2px solid #fff;

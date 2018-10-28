@@ -13,9 +13,9 @@
 export default {
   components: {
   },
-  data (){
-    return {
-      gold: 10000
+  computed: {
+    gold: function(){
+      return this.$store.state.gold
     }
   }
 }

@@ -24,15 +24,15 @@
     <div class="profile-parameter">
       <div class="profile-parameter-list">
         <ul>
-          <li>ちから：５５</li>
-          <li>すばやさ：５５</li>
-          <li>たいりょく：５５</li>
-          <li>かしこさ：５５</li>
-          <li>うんのよさ：５５</li>
-          <li>さいだいHP：５５</li>
-          <li>さいだいMP：５５</li>
-          <li>こうげき力：５５</li>
-          <li>しゅび力：５５</li>
+          <li>こうどう力：６０</li>
+          <li>はなす力：３６</li>
+          <li>ぶんしょう力：４０</li>
+          <li>ろんりてき：５５</li>
+          <li>うんのよさ：９０</li>
+          <li>かいぜん力：７２</li>
+          <li>ぶんせき力：４２</li>
+          <li>にんたい力：１１</li>
+          <li>けつだん力：３９</li>
           <li>Ex：254040</li>
         </ul>
       </div>

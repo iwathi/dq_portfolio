@@ -1,12 +1,15 @@
 <template>
   <div>
-    <div class="kingImg">
-      <img src="~/assets/img/king.gif" />
+    <div class="avator">
+      <div class="kingImg">
+        <img src="~/assets/img/king.gif" />
+      </div>
+      <TheComment class="comment" />
+      <!--      <TheGold class="gold" /> -->
     </div>
     <div class="sidebar">
       <TheStatus class="status" />
       <TheHeader class="sidemenu" />
-    <TheGold class="gold" />
     </div>
     <div class="pages">
       <nuxt/>
@@ -19,12 +22,14 @@ import TheHeader from '~/components/TheHeader.vue'
 import TheFooter from '~/components/TheFooter.vue'
 import TheStatus from '~/components/TheStatus.vue'
 import TheGold from '~/components/TheGold.vue'
+import TheComment from '~/components/TheComment.vue'
 
 export default {
   components: {
     TheHeader,
     TheFooter,
     TheGold,
+    TheComment,
     TheStatus
   }
 }
@@ -42,7 +47,7 @@ html {
 .kingImg {
   position: absolute;
   top: 15px;
-  left: 300px;
+  left: 180px;
 }
 
 .pages {
@@ -63,6 +68,20 @@ html {
   content: "めにゅう";
   position: relative;
   left: 45px;
+  top: 12px;
+}
+
+.comment {
+  position: absolute;
+  top: 15px;
+  left: 290px;
+}
+
+.comment::before {
+  background-color: #000;
+  color: #fff;
+  position: relative;
+  left: 37px;
   top: 12px;
 }
 
