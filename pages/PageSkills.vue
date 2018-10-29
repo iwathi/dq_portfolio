@@ -28,7 +28,7 @@ export default {
       skillsChoice: 0,
       skillsList: [
         {
-          name: 'python',
+          name: 'Python',
           details: [
             'NFC',
             'Lチカ',
@@ -39,8 +39,16 @@ export default {
         {
           name: 'Ruby',
           details: [
-            'Ruby on Rails',
-            'test'
+            'Ruby on Rails'
+          ]
+        },
+        {
+          name: 'HTML',
+          details: [
+            'HTML',
+            'CSS',
+            'Javascript',
+            'Vue.js'
           ]
         },
       ]

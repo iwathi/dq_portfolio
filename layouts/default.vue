@@ -4,7 +4,7 @@
       <div class="kingImg">
         <img src="~/assets/img/king.gif" />
       </div>
-      <TheComment class="comment" />
+      <!-- <TheComment class="comment" /> -->
       <!--      <TheGold class="gold" /> -->
     </div>
     <div class="sidebar">
