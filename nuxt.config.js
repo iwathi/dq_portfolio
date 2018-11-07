@@ -1,4 +1,5 @@
 module.exports = {
+
   /*
   ** Headers of the page
   */
@@ -14,6 +15,11 @@ module.exports = {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   },
+  modules: [
+    ['@nuxtjs/google-analytics', {
+      id: 'UA-90357775-4'
+    }]
+ ],
   css:[
   '@/assets/css/dqmenu.css'
   ],
@@ -40,4 +46,3 @@ module.exports = {
     }
   }
 }
-
