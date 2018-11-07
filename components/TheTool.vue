@@ -1,5 +1,5 @@
 <template>
-  <section @click="toolClick">
+  <section>
     <div class="tools-menu">
       <div class="tools-menu-list">
         <ul>
@@ -7,7 +7,7 @@
         </ul>
       </div>
     </div>
-    <div class="tools-details">
+    <div class="tools-details" @click="toolClick">
       <div class="tools-details-list">
         <ul>
           <li v-for="detail in toolsList[toolsChoice].details" :key="toolsList[toolsChoice].name+detail.name"><a :href="detail.link">{{detail.name}}</a></li>
