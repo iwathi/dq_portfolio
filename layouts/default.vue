@@ -1,36 +1,73 @@
 <template>
   <div>
-    <div class="avator">
-      <div class="kingImg">
-        <img src="~/assets/img/king.gif" />
-      </div>
-      <!-- <TheComment class="comment" /> -->
-      <!--      <TheGold class="gold" /> -->
-    </div>
     <div class="sidebar">
       <TheStatus class="status" />
-      <TheHeader class="sidemenu" />
+      <TheCommand class="sidemenu" />
     </div>
     <div class="pages">
       <nuxt/>
+    </div>
+    <div class="display-components">
+      <div class="comment" v-if="commentDisplay">
+        <TheComment/>
+      </div>
+      <TheChoice class="choice" v-if="choiceDisplay" />
+      <TheStrength class="window" v-if="strengthDisplay" />
+      <TheStrategy class="window" v-if="strategyDisplay" />
+      <TheSpell class="window" v-if="spellDisplay" />
+      <TheTool class="window" v-if="toolDisplay" />
     </div>
   </div>
 </template>
 
 <script>
-import TheHeader from '~/components/TheHeader.vue'
 import TheFooter from '~/components/TheFooter.vue'
 import TheStatus from '~/components/TheStatus.vue'
 import TheGold from '~/components/TheGold.vue'
 import TheComment from '~/components/TheComment.vue'
+import TheCommand from '~/components/TheCommand.vue'
+import TheChoice from '~/components/TheChoice.vue'
+import TheStrength from '~/components/TheStrength.vue'
+import TheStrategy from '~/components/TheStrategy.vue'
+import TheSpell from '~/components/TheSpell.vue'
+import TheTool from '~/components/TheTool.vue'
 
 export default {
   components: {
-    TheHeader,
     TheFooter,
     TheGold,
     TheComment,
+    TheChoice,
+    TheCommand,
+    TheStrength,
+    TheStrategy,
+    TheSpell,
+    TheTool,
     TheStatus
+  },
+  data: function() {
+    return {
+    }
+  },
+  computed: {
+    commentDisplay: function(){
+      return this.$store.state.commentDisplay
+    },
+    choiceDisplay: function(){
+      return this.$store.state.choiceDisplay
+    },
+    strengthDisplay: function(){
+      return this.$store.state.strengthDisplay
+    },
+    strategyDisplay: function(){
+      return this.$store.state.strategyDisplay
+    },
+    spellDisplay: function(){
+      return this.$store.state.spellDisplay
+    },
+    toolDisplay: function(){
+      return this.$store.state.toolDisplay
+    },
   }
 }
 </script>
@@ -50,9 +87,15 @@ html {
   left: 180px;
 }
 
+.window {
+  position: absolute;
+  top: 100px;
+  left: 180px;
+}
+
 .pages {
   position: absolute;
-  top: 120px;
+  top: 10px;
   left: 180px;
 }
 
@@ -65,16 +108,22 @@ html {
 .sidemenu::before {
   background-color: #000;
   color: #fff;
-  content: "めにゅう";
+  content: "こまんど";
   position: relative;
   left: 45px;
   top: 12px;
 }
 
+.choice {
+  position: absolute;
+  top: 200px;
+  left: 380px;
+}
+
 .comment {
   position: absolute;
-  top: 15px;
-  left: 290px;
+  top: 340px;
+  left: 180px;
 }
 
 .comment::before {
