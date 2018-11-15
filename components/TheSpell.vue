@@ -31,11 +31,11 @@ export default {
           name: 'ルーラ',
           details: [
             {
-              name: 'いわてぃのブログ',
+              name: 'ブログ',
               link: 'http://iwathi3.hatenablog.com/'
             },
             {
-              name: 'いわてぃのTwitter',
+              name: 'Twitter',
               link: 'https://twitter.com/iwathi'
             },
           ]
