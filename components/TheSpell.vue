@@ -10,7 +10,7 @@
     <div class="spells-details">
       <div class="spells-details-list">
         <ul>
-          <li v-for="detail in spellsList[spellsChoice].details" :key="spellsList[spellsChoice].name+detail.name"><a :href="detail.link">{{detail.name}}</a></li>
+          <li v-for="detail in spellsList[spellsChoice].details" :key="spellsList[spellsChoice].name+detail.name"><a :href="detail.link" target="_blank">{{detail.name}}</a></li>
         </ul>
       </div>
     </div>
