@@ -31,19 +31,7 @@ export default {
           name: 'ハードウェア',
           details: [
             {
-              name: 'Anet A8',
-              link: '#'
-            },
-            {
-              name: 'Arduino',
-              link: '#'
-            },
-            {
-              name: 'Raspberry Pi',
-              link: '#'
-            },
-            {
-              name: 'iMac 4K, 21.5 2017',
+              name: 'iMac 4K, 21.5',
               link: '#'
             },
             {
@@ -55,6 +43,18 @@ export default {
               link: '#'
             },
             {
+              name: 'Anet A8(3DPrinter)',
+              link: '#'
+            },
+            {
+              name: 'Arduino',
+              link: '#'
+            },
+            {
+              name: 'Raspberry Pi',
+              link: '#'
+            },
+            {
               name: 'Oculus Go',
               link: '#'
             },
@@ -63,11 +63,15 @@ export default {
               link: '#'
             },
             {
+              name: 'PIXPRO SP360 4K',
+              link: '#'
+            },
+            {
               name: 'Kindle',
               link: '#'
             },
             {
-              name: 'GX7-mk2',
+              name: 'LUMIX GX7-MK2',
               link: '#'
             },
             {
@@ -92,11 +96,15 @@ export default {
           name: 'ソフトウェア',
           details: [
             {
+              name: 'Vim',
+              link: '#'
+            },
+            {
               name: 'Git',
               link: '#'
             },
             {
-              name: 'vim',
+              name: 'Docker',
               link: '#'
             },
             {
@@ -109,6 +117,22 @@ export default {
             },
             {
               name: 'Fusion 360',
+              link: '#'
+            },
+            {
+              name: 'GitHub',
+              link: '#'
+            },
+            {
+              name: 'GitLab',
+              link: '#'
+            },
+            {
+              name: 'Netlify',
+              link: '#'
+            },
+            {
+              name: 'Google Apps Script',
               link: '#'
             },
           ]

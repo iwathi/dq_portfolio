@@ -2,82 +2,22 @@
 Copyright 2009 sho shirasaka.
 http://ameblo.jp/design-agent/
 */
-*{margin:0;padding:0;}
-a{outline:none;}
-li{list-style-type:none;}
-#dqmenu{
-	position:absolute;
-	display:block;
-	top:20px;
-	left:20px;
-	width:120px;
-	background:url(../img/dqmenu_bottom.png) no-repeat left bottom;
-	font-size:12px!important;
-	padding-bottom:8px;
+@font-face
+{
+font-family: PixelMplus10 Regular;
+src: url('https://cdn.leafscape.be/PixelMplus/PixelMplus10-Regular_web.woff2')
+     format("woff2");
 }
-#dqmenu li a{display:block;width:120px;text-indent:-9999px;}
-#dqmenu .top{display:block;width:120px;height:8px;background:url(../img/dqmenu.png) no-repeat top left;text-indent:-9999px;}
-#dqmenu .menu01 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -10px;}
-#dqmenu .menu02 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -40px;}
-#dqmenu .menu03 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -70px;}
-#dqmenu .menu04 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -100px;}
-#dqmenu .menu05 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -130px;}
-#dqmenu .menu06 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -160px;}
-#dqmenu .menu07 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -190px;}
-#dqmenu .menu08 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -220px;}
-#dqmenu .menu09 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -250px;}
-#dqmenu .menu10 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -280px;}
-#dqmenu .menu11 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -310px;}
-#dqmenu .menu12 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -340px;}
-#dqmenu .menu13 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -370px;}
-#dqmenu .menu14 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -400px;}
-#dqmenu .menu15 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -430px;}
-#dqmenu .menu16 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -460px;}
-#dqmenu .menu17 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -490px;}
-#dqmenu .menu18 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -520px;}
-#dqmenu .menu19 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -550px;}
-#dqmenu .menu20 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -580px;}
-#dqmenu .menu21 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -610px;}
-#dqmenu .menu22 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -640px;}
-#dqmenu .menu23 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -670px;}
-#dqmenu .menu24 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -700px;}
-#dqmenu .menu25 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -730px;}
-#dqmenu .menu26 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -760px;}
-#dqmenu .menu27 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -790px;}
-#dqmenu .menu28 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -820px;}
-#dqmenu .menu29 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -850px;}
-#dqmenu .menu30 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -880px;}
-#dqmenu .menu31 a{height:30px;background:url(../img/dqmenu.png) no-repeat 0 -910px;}
 
-#dqmenu .menu01 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -10px;}
-#dqmenu .menu02 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -40px;}
-#dqmenu .menu03 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -70px;}
-#dqmenu .menu04 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -100px;}
-#dqmenu .menu05 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -130px;}
-#dqmenu .menu06 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -160px;}
-#dqmenu .menu07 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -190px;}
-#dqmenu .menu08 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -220px;}
-#dqmenu .menu09 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -250px;}
-#dqmenu .menu10 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -280px;}
-#dqmenu .menu11 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -310px;}
-#dqmenu .menu12 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -340px;}
-#dqmenu .menu13 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -370px;}
-#dqmenu .menu14 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -400px;}
-#dqmenu .menu15 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -430px;}
-#dqmenu .menu16 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -460px;}
-#dqmenu .menu17 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -490px;}
-#dqmenu .menu18 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -520px;}
-#dqmenu .menu19 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -550px;}
-#dqmenu .menu20 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -580px;}
-#dqmenu .menu21 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -610px;}
-#dqmenu .menu22 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -640px;}
-#dqmenu .menu23 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -670px;}
-#dqmenu .menu24 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -700px;}
-#dqmenu .menu25 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -730px;}
-#dqmenu .menu26 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -760px;}
-#dqmenu .menu27 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -790px;}
-#dqmenu .menu28 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -820px;}
-#dqmenu .menu29 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -850px;}
-#dqmenu .menu30 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -880px;}
-#dqmenu .menu31 a:hover{height:30px;background:url(../img/dqmenu.png) no-repeat -120px -910px;}
+@font-face
+{
+font-family: PixelMplus12 Regular;
+src: url('https://cdn.leafscape.be/PixelMplus/PixelMplus12-Regular_web.woff2')
+     format("woff2");
+   }
 
+*{
+margin:0;padding:0;
+font-family: PixelMplus10 Regular
+}
+li{list-style-type:none;}

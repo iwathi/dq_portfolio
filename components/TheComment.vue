@@ -255,7 +255,7 @@ export default {
           'Vue.js, Ruby on Rails　などのスキルが',
           '多少あるようじゃ',
           'スクリプト言語が　好きなようで',
-          'Python, Rubyなどを多様しておる',
+          'Python, Rubyなどを多用しておる',
           '',
           '',
           'あとはArduinoなどをいじっておるため',
