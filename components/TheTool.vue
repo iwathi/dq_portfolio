@@ -3,7 +3,7 @@
     <div class="tools-menu">
       <div class="tools-menu-list">
         <ul>
-          <li v-for="(tool, index) in toolsList" v-on:mouseleave="toolsMouseleave(index)" v-on:mouseover="toolsMouseover(index)" :key="tool.name+index"><a class="menuCursor" v-if="toolsChoice==index">▶</a>{{tool.name}}</li>
+          <li v-for="(tool, index) in toolsList" v-on:mouseleave="toolsMouseleave(index)" v-on:mouseover="toolsMouseover(index)" :key="tool.name+index"><a class="toolCursor" v-if="toolsChoice==index">▶</a>{{tool.name}}</li>
         </ul>
       </div>
     </div>
@@ -171,9 +171,16 @@ a:visited {
   color: white;
 }
 
-.menuCursor {
-  text-align: left;
-  font-family: sans-serif; 
+.toolCursor {
+	text-align: left;
+	font-family:
+	"メイリオ", Meiryo,
+	"ヒラギノ角ゴ Pro W3",
+	"HIragino Kaku Gothic Pro W3",
+	"HIragino Kaku Gothic Pro",
+	Osaka,
+	"ＭＳ Ｐゴシック", "MS P Gothic",
+	sans-serif;
 }
 
 .tools-menu {

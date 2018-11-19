@@ -3,7 +3,7 @@
     <div class="spells-menu">
       <div class="spells-menu-list">
         <ul>
-          <li v-for="(spell, index) in spellsList" v-on:mouseleave="spellsMouseleave(index)" v-on:mouseover="spellsMouseover(index)" :key="spell.name+index"><a class="menuCursor" v-if="spellsChoice==index">▶</a>{{spell.name}}</li>
+          <li v-for="(spell, index) in spellsList" v-on:mouseleave="spellsMouseleave(index)" v-on:mouseover="spellsMouseover(index)" :key="spell.name+index"><a class="spellCursor" v-if="spellsChoice==index">▶</a>{{spell.name}}</li>
         </ul>
       </div>
     </div>
@@ -75,9 +75,17 @@ a:visited {
 }
 
 .spellCursor {
-  text-align: left;
-  font-family: sans-serif; 
+	text-align: left;
+	font-family:
+	"メイリオ", Meiryo,
+	"ヒラギノ角ゴ Pro W3",
+	"HIragino Kaku Gothic Pro W3",
+	"HIragino Kaku Gothic Pro",
+	Osaka,
+	"ＭＳ Ｐゴシック", "MS P Gothic",
+	sans-serif;
 }
+
 
 .spells-menu {
   position: absolute;
