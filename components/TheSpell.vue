@@ -73,6 +73,12 @@ a:visited {
   text-decoration: none;
   color: white;
 }
+
+.spellCursor {
+  text-align: left;
+  font-family: sans-serif; 
+}
+
 .spells-menu {
   position: absolute;
   top: 0px;

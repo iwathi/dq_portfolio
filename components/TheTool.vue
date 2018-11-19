@@ -170,6 +170,12 @@ a:visited {
   text-decoration: none;
   color: white;
 }
+
+.menuCursor {
+  text-align: left;
+  font-family: sans-serif; 
+}
+
 .tools-menu {
   position: absolute;
   top: 0px;

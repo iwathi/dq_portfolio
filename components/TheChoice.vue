@@ -64,6 +64,7 @@ export default {
 
 .choiceCursor {
   text-align: left;
+  font-family: sans-serif; 
 }
 
 .sideChoice-list {

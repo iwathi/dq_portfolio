@@ -63,6 +63,7 @@ export default {
 
 .menuCursor {
   text-align: left;
+  font-family: sans-serif; 
 }
 
 .sidemenu-list {
