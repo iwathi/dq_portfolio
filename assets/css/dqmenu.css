@@ -18,6 +18,6 @@ src: url('https://cdn.leafscape.be/PixelMplus/PixelMplus12-Regular_web.woff2')
 
 *{
 margin:0;padding:0;
-font-family: PixelMplus10 Regular
+font-family: 'PixelMplus10 Regular', sans-serif;
 }
 li{list-style-type:none;}
