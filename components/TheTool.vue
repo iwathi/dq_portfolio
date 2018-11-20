@@ -10,7 +10,7 @@
     <div class="tools-details" @click="toolClick">
       <div class="tools-details-list">
         <ul>
-          <li v-for="detail in toolsList[toolsChoice].details" :key="toolsList[toolsChoice].name+detail.name"><a :href="detail.link">{{detail.name}}</a></li>
+          <li v-for="detail in toolsList[toolsChoice].details" :key="toolsList[toolsChoice].name+detail.name"><a :href="detail.link" target="_blank">{{detail.name}}</a></li>
         </ul>
       </div>
     </div>
@@ -28,7 +28,52 @@ export default {
       toolsChoice: 0,
       toolsList: [
         {
-          name: 'ハードウェア',
+          name: '武器',
+          details: [
+            {
+              name: 'Vim',
+              link: '#'
+            },
+            {
+              name: 'Git',
+              link: '#'
+            },
+            {
+              name: 'Docker',
+              link: '#'
+            },
+            {
+              name: 'Slack',
+              link: '#'
+            },
+            {
+              name: 'PhotoShop',
+              link: '#'
+            },
+            {
+              name: 'Fusion 360',
+              link: '#'
+            },
+            {
+              name: 'GitHub',
+              link: '#'
+            },
+            {
+              name: 'GitLab',
+              link: '#'
+            },
+            {
+              name: 'Netlify',
+              link: '#'
+            },
+            {
+              name: 'Google Apps Script',
+              link: '#'
+            },
+          ]
+        },
+        {
+          name: 'つくえのうえ',
           details: [
             {
               name: 'iMac 4K, 21.5',
@@ -93,48 +138,24 @@ export default {
           ]
         },
         {
-          name: 'ソフトウェア',
+          name: 'せいかのふくろ',
           details: [
             {
-              name: 'Vim',
-              link: '#'
+              name: 'ダンボーカメラ',
+              link: 'https://twitter.com/iwathi/status/916465245983408128'
             },
             {
-              name: 'Git',
-              link: '#'
+              name: 'タブレット壁掛け',
+              link: 'https://www.thingiverse.com/thing:3090632'
             },
             {
-              name: 'Docker',
-              link: '#'
+              name: '綿棒ケース(menbou)',
+              link: 'https://www.thingiverse.com/thing:3104757'
             },
             {
-              name: 'Slack',
-              link: '#'
-            },
-            {
-              name: 'PhotoShop',
-              link: '#'
-            },
-            {
-              name: 'Fusion 360',
-              link: '#'
-            },
-            {
-              name: 'GitHub',
-              link: '#'
-            },
-            {
-              name: 'GitLab',
-              link: '#'
-            },
-            {
-              name: 'Netlify',
-              link: '#'
-            },
-            {
-              name: 'Google Apps Script',
-              link: '#'
-            },
+              name: '#hiyokonitsudukeまとめ',
+              link: 'https://www.hiyokonitsuduke.work/'
+            }
           ]
         },
       ]
@@ -216,7 +237,7 @@ a:visited {
   position: absolute;
   top: 0px;
   left: 170px;
-  width: 150px;
+  width: 190px;
   height: 350px;
   padding:10px;
   margin-bottom:10px;

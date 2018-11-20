@@ -3,7 +3,10 @@
     <div class="spells-menu">
       <div class="spells-menu-list">
         <ul>
-          <li v-for="(spell, index) in spellsList" v-on:mouseleave="spellsMouseleave(index)" v-on:mouseover="spellsMouseover(index)" :key="spell.name+index"><a class="spellCursor" v-if="spellsChoice==index">▶</a>{{spell.name}}</li>
+          <li v-for="(spell, index) in spellsList" v-on:mouseleave="spellsMouseleave(index)" v-on:mouseover="spellsMouseover(index)" :key="spell.name+index"><a class="spellCursor" v-if="spellsChoice==index">▶</a>
+<a v-if="spell.id==1" onclick="history.back()">{{spell.name}}</a>
+<a v-else>{{spell.name}}</a>
+</li>
         </ul>
       </div>
     </div>
@@ -28,6 +31,7 @@ export default {
       spellsChoice: 0,
       spellsList: [
         {
+					id: 0,
           name: 'ルーラ',
           details: [
             {
@@ -38,6 +42,12 @@ export default {
               name: 'Twitter',
               link: 'https://twitter.com/iwathi'
             },
+          ]
+        },
+        {
+					id: 1,
+          name: 'リレミト',
+          details: [
           ]
         },
       ]
@@ -85,7 +95,6 @@ a:visited {
 	"ＭＳ Ｐゴシック", "MS P Gothic",
 	sans-serif;
 }
-
 
 .spells-menu {
   position: absolute;
