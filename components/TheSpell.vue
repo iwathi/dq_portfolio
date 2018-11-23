@@ -42,6 +42,10 @@ export default {
               name: 'Twitter',
               link: 'https://twitter.com/iwathi'
             },
+            {
+              name: 'Qiita',
+              link: 'https://qiita.com/iwathi/items/8f054d10590f32b438a4'
+            },
           ]
         },
         {
