@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="sidebar">
-      <TheStatus class="status" />
-      <TheCommand class="sidemenu" />
+      <TheStatus class="status"/>
+      <TheCommand class="sidemenu"/>
     </div>
     <div class="pages">
       <nuxt/>
@@ -11,26 +11,26 @@
       <div class="comment" v-if="commentDisplay">
         <TheComment/>
       </div>
-      <TheChoice class="choice" v-if="choiceDisplay" />
-      <TheStrength class="window" v-if="strengthDisplay" />
-      <TheStrategy class="window" v-if="strategyDisplay" />
-      <TheSpell class="window" v-if="spellDisplay" />
-      <TheTool class="window" v-if="toolDisplay" />
+      <TheChoice class="choice" v-if="choiceDisplay"/>
+      <TheStrength class="window" v-if="strengthDisplay"/>
+      <TheStrategy class="window" v-if="strategyDisplay"/>
+      <TheSpell class="window" v-if="spellDisplay"/>
+      <TheTool class="window" v-if="toolDisplay"/>
     </div>
   </div>
 </template>
 
 <script>
-import TheFooter from '~/components/TheFooter.vue'
-import TheStatus from '~/components/TheStatus.vue'
-import TheGold from '~/components/TheGold.vue'
-import TheComment from '~/components/TheComment.vue'
-import TheCommand from '~/components/TheCommand.vue'
-import TheChoice from '~/components/TheChoice.vue'
-import TheStrength from '~/components/TheStrength.vue'
-import TheStrategy from '~/components/TheStrategy.vue'
-import TheSpell from '~/components/TheSpell.vue'
-import TheTool from '~/components/TheTool.vue'
+import TheFooter from "~/components/TheFooter.vue";
+import TheStatus from "~/components/TheStatus.vue";
+import TheGold from "~/components/TheGold.vue";
+import TheComment from "~/components/TheComment.vue";
+import TheCommand from "~/components/TheCommand.vue";
+import TheChoice from "~/components/TheChoice.vue";
+import TheStrength from "~/components/TheStrength.vue";
+import TheStrategy from "~/components/TheStrategy.vue";
+import TheSpell from "~/components/TheSpell.vue";
+import TheTool from "~/components/TheTool.vue";
 
 export default {
   components: {
@@ -46,37 +46,37 @@ export default {
     TheStatus
   },
   data: function() {
-    return {
-    }
+    return {};
   },
   computed: {
-    commentDisplay: function(){
-      return this.$store.state.commentDisplay
+    commentDisplay: function() {
+      return this.$store.state.commentDisplay;
     },
-    choiceDisplay: function(){
-      return this.$store.state.choiceDisplay
+    choiceDisplay: function() {
+      return this.$store.state.choiceDisplay;
     },
-    strengthDisplay: function(){
-      return this.$store.state.strengthDisplay
+    strengthDisplay: function() {
+      return this.$store.state.strengthDisplay;
     },
-    strategyDisplay: function(){
-      return this.$store.state.strategyDisplay
+    strategyDisplay: function() {
+      return this.$store.state.strategyDisplay;
     },
-    spellDisplay: function(){
-      return this.$store.state.spellDisplay
+    spellDisplay: function() {
+      return this.$store.state.spellDisplay;
     },
-    toolDisplay: function(){
-      return this.$store.state.toolDisplay
-    },
+    toolDisplay: function() {
+      return this.$store.state.toolDisplay;
+    }
   }
-}
+};
 </script>
 <style>
 html {
   position: relative;
   background: black;
   color: white;
-  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  font-family: "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, sans-serif;
   font-size: 16px;
   word-spacing: 1px;
 }

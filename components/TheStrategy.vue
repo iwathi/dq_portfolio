@@ -44,32 +44,28 @@
 </template>
 
 <script>
-
 export default {
-  components: {
-  },
+  components: {},
   methods: {
-    strategyClick: function (){
-      this.$store.commit('setStrategyDisplay', false)
+    strategyClick: function() {
+      this.$store.commit("setStrategyDisplay", false);
     }
   },
   mounted: function() {
-    this.$store.commit('pageChange', 1)
-
-  },
-}
+    this.$store.commit("pageChange", 1);
+  }
+};
 </script>
 
 <style>
-
 .strategy-status {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 230px;
   height: 215px;
-  padding:10px;
-  margin-bottom:10px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 2px solid #fff;
   border-radius: 10px;
   background-color: #000;
@@ -97,8 +93,8 @@ export default {
   left: 0px;
   width: 130px;
   height: 100px;
-  padding:10px;
-  margin-bottom:10px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 2px solid #fff;
   border-radius: 10px;
 }
@@ -114,8 +110,8 @@ export default {
   left: 170px;
   width: 150px;
   height: 250px;
-  padding:10px;
-  margin-bottom:10px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 2px solid #fff;
   border-radius: 10px;
 }

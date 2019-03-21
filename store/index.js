@@ -1,4 +1,5 @@
 import Vuex from 'vuex'
+import Vue from 'vue'
 
 
 const createStore = () => {
@@ -54,18 +55,44 @@ const createStore = () => {
       choiceState: -1,
       choiceNumber: 0,
       choiceDisplay: false,
+      toolCommand: false,
+      spellCommand: false,
       lx: 2,
       rx: 2,
       fy: 2,
       by: 3,
-      toolCommand: false,
-      spellCommand: false
+      xx: 8,
+      yy: 5,
+      xy: [
+        [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+        [3, 9, 9, 9, 9, 9, 9, 9, 9, 9, 3],
+        [3, 9, 4, 9, 9, 1, 9, 9, 5, 9, 3],
+        [3, 9, 2, 2, 2, 2, 2, 2, 2, 9, 3],
+        [3, 9, 2, 2, 2, 2, 2, 2, 2, 9, 3],
+        [3, 9, 2, 2, 2, 2, 2, 2, 2, 9, 3],
+        [3, 9, 2, 2, 2, 2, 2, 2, 2, 9, 3],
+        [3, 9, 2, 2, 2, 2, 2, 2, 2, 9, 3],
+        [3, 9, 2, 2, 2, 0, 2, 2, 2, 9, 3],
+        [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3],
+      ]
     }),
-    // ■■■■■■■■■■■■
 
     mutations: {
       increment (state) {
         state.counter++
+      },
+      setxxyy (state, payload) {
+        //state.xy[x][y] = value
+        state.xx = payload['x']
+        state.yy = payload['y']
+      },
+      setxy (state, payload) {
+        //state.xy[x][y] = value
+        const x = payload['x']
+        const y = payload['y']
+        const value = payload['value']
+
+        Vue.set(state.xy[x], y, value)
       },
       setby (state, value) {
         state.by = value
@@ -78,12 +105,6 @@ const createStore = () => {
       },
       setlx (state, value) {
         state.lx = value
-      },
-      setPositionState (state, lx, rx, fy, by) {
-        state.lx = lx
-        state.rx = rx
-        state.fy = fy
-        state.by = by
       },
       setCommandListToolDisplay (state, flag) {
         state.commandList[4].display = flag

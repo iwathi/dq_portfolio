@@ -9,26 +9,23 @@
 </template>
 
 <script>
-
 export default {
-  components: {
-  },
+  components: {},
   computed: {
-    gold: function(){
-      return this.$store.state.gold
+    gold: function() {
+      return this.$store.state.gold;
     }
   }
-}
+};
 </script>
 
 <style>
-
-.gold-list{
+.gold-list {
   text-align: left;
   width: 150px;
   height: 25px;
-  padding:5px;
-  margin-bottom:10px;
+  padding: 5px;
+  margin-bottom: 10px;
   border: 2px solid #fff;
   border-radius: 10px;
 }

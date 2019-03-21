@@ -2,22 +2,23 @@
 Copyright 2009 sho shirasaka.
 http://ameblo.jp/design-agent/
 */
-@font-face
-{
-font-family: PixelMplus10 Regular;
-src: url('https://cdn.leafscape.be/PixelMplus/PixelMplus10-Regular_web.woff2')
-     format("woff2");
+@font-face {
+  font-family: PixelMplus10 Regular;
+  src: url("https://cdn.leafscape.be/PixelMplus/PixelMplus10-Regular_web.woff2")
+    format("woff2");
 }
 
-@font-face
-{
-font-family: PixelMplus12 Regular;
-src: url('https://cdn.leafscape.be/PixelMplus/PixelMplus12-Regular_web.woff2')
-     format("woff2");
-   }
-
-*{
-margin:0;padding:0;
-font-family: 'PixelMplus10 Regular';
+@font-face {
+  font-family: PixelMplus12 Regular;
+  src: url("https://cdn.leafscape.be/PixelMplus/PixelMplus12-Regular_web.woff2")
+    format("woff2");
 }
-li{list-style-type:none;}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "PixelMplus10 Regular";
+}
+li {
+  list-style-type: none;
+}

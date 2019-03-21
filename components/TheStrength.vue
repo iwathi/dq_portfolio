@@ -41,33 +41,28 @@
 </template>
 
 <script>
-
 export default {
-  components: {
-  },
+  components: {},
   methods: {
-    strengthClick: function (){
-      this.$store.commit('setStrengthDisplay', false)
+    strengthClick: function() {
+      this.$store.commit("setStrengthDisplay", false);
     }
-
   },
   mounted: function() {
-    this.$store.commit('pageChange', 1)
-
-  },
-}
+    this.$store.commit("pageChange", 1);
+  }
+};
 </script>
 
 <style>
-
 .profile-status {
   position: absolute;
   top: 0px;
   left: 0px;
   width: 130px;
   height: 115px;
-  padding:10px;
-  margin-bottom:10px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 2px solid #fff;
   border-radius: 10px;
   background-color: #000;
@@ -95,8 +90,8 @@ export default {
   left: 0px;
   width: 130px;
   height: 100px;
-  padding:10px;
-  margin-bottom:10px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 2px solid #fff;
   border-radius: 10px;
 }
@@ -112,8 +107,8 @@ export default {
   left: 170px;
   width: 150px;
   height: 250px;
-  padding:10px;
-  margin-bottom:10px;
+  padding: 10px;
+  margin-bottom: 10px;
   border: 2px solid #fff;
   border-radius: 10px;
 }
