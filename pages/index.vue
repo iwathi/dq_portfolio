@@ -101,8 +101,8 @@ li {
 }
 
 .logo-img-vue {
-  height: 100px;
-  width: 100px;
+  height: 200px;
+  width: 200px;
   position: relative;
   filter: grayscale(80%);
   z-index: 0;
@@ -147,7 +147,7 @@ li.continue {
   }
   100% {
     opacity: 0.5;
-    top: -80px;
+    top: -180px;
   }
 }
 
@@ -160,8 +160,8 @@ li.continue {
     opacity: 0.2;
   }
   100% {
-    opacity: 0.7;
-    top: 100px;
+    opacity: 0.9;
+    top: 120px;
   }
 }
 
